@@ -2,6 +2,7 @@
 import React,{useState} from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
+import AddNewSessionDialog from './AddNewSessionDialog'
 
 export default function HistoryList() {
   const [historyList, setHistoryList] = useState([])
@@ -15,9 +16,7 @@ export default function HistoryList() {
          />
          <h2 className='font-bold text-xl'>No Recent Consultations</h2>
          <p>it looks like you haven't consulted with a doc yet</p>
-         <Button className='mt-2'>
-          + Start a new Convo
-         </Button>
+          <AddNewSessionDialog/>
       </div>
       :
       <div>
